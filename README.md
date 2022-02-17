@@ -1,4 +1,4 @@
-# Inner-join
+# sqldatainsert-Tests
 
 
 
@@ -15,14 +15,14 @@ Already a pro? Just edit this README.md and make it your own. Want to make it ea
 
 ```
 cd existing_repo
-git remote add origin https://gitlab.com/autocodeteam/sql/inner-join.git
+git remote add origin https://gitlab.com/autocodeteam/sqldatainsert-tests.git
 git branch -M main
 git push -uf origin main
 ```
 
 ## Integrate with your tools
 
-- [ ] [Set up project integrations](https://gitlab.com/autocodeteam/sql/inner-join/-/settings/integrations)
+- [ ] [Set up project integrations](https://gitlab.com/autocodeteam/sqldatainsert-tests/-/settings/integrations)
 
 ## Collaborate with your team
 
