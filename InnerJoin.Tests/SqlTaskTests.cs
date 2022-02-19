@@ -1,4 +1,4 @@
-﻿using NUnit.Framework;
+using NUnit.Framework;
 using InnerJoin.Tests.Helpers;
 using System;
 using InnerJoin.Tests.Models;
@@ -9,7 +9,7 @@ namespace InnerJoin.Tests
     [TestFixture]
     public class SqlTaskTests
     {
-        private const int FilesCount = 5;
+        private const int FilesCount = 3;
         private static readonly string ProjectDirectory = Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName;
         private static readonly string DatabaseFile = Path.Combine(ProjectDirectory, "DB", "marketplace.db");
         private static readonly string[] FileNames = { "task1.sql", "task2.sql", "task3.sql" };
