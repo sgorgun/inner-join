@@ -14,11 +14,14 @@ namespace InnerJoin.Tests.Helpers
         private static readonly Regex InnerJoin_Regex = new Regex(@"\s*INNER\s+JOIN\s+([\s\w]+ON){1}\s+([\s\.\w]*[^=]){1}\s*=", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         private static readonly Regex OrderBy_Regex = new Regex(@"ORDER\s+BY\s+\w+", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         private static readonly Regex GroupBy_Regex = new Regex(@"GROUP\s+BY\s+\w+", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        private static readonly Regex Where_Regex = new Regex(@"\s+WHERE\s+\w+", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         public static bool ContainsSelectDistinctFrom(string query) => SelectDistinctFrom_Regex.IsMatch(query);
         public static bool ContainsSelectFromAggregate(string query) => SelectFromAggregate_Regex.IsMatch(query);
         public static bool ContainsInnerJoin(string query) => InnerJoin_Regex.IsMatch(query);
         public static bool ContainsOrderBy(string query) => OrderBy_Regex.IsMatch(query);
         public static bool ContainsGroupBy(string query) => GroupBy_Regex.IsMatch(query);
+
+        public static bool ContainsWhereBy(string query) => Where_Regex.IsMatch(query);
 
         public static SelectResult[] GetResults(IEnumerable<string> queries)
         {

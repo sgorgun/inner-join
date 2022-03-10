@@ -32,14 +32,14 @@ INTEGER,CHAR,DOUBLE
 2,Red Apple,5.05
 41,Red Apple,5.5
 42,Red Apple,12.23
-23,Shark,15.0
-24,Shark,20.0
-25,Shark,16.2
-26,Shark,12.0
 19,Tomato,44.44
 20,Tomato,55.55
 39,Tomato,44.44
 40,Tomato,55.55
+23,Vodka,15.0
+24,Vodka,20.0
+25,Vodka,16.2
+26,Vodka,12.0
 7,Water,13.0
 8,Water,50.0
 47,Water,33.33
