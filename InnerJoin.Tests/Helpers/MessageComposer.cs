@@ -1,6 +1,6 @@
 ﻿using System.Text;
 
-namespace InnerJoin.Tests.Helpers
+namespace AutocodeDB.Helpers
 {
     internal class MessageComposer
     {

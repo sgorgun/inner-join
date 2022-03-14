@@ -1,11 +1,11 @@
 ﻿using Microsoft.Data.Sqlite;
-using InnerJoin.Tests.Models;
+using AutocodeDB.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text.RegularExpressions;
 
-namespace InnerJoin.Tests.Helpers
+namespace AutocodeDB.Helpers
 {
     internal class SelectHelper
     {
@@ -15,13 +15,13 @@ namespace InnerJoin.Tests.Helpers
         private static readonly Regex OrderBy_Regex = new Regex(@"ORDER\s+BY\s+\w+", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         private static readonly Regex GroupBy_Regex = new Regex(@"GROUP\s+BY\s+\w+", RegexOptions.Compiled | RegexOptions.IgnoreCase);
         private static readonly Regex Where_Regex = new Regex(@"\s+WHERE\s+\w+", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+
         public static bool ContainsSelectDistinctFrom(string query) => SelectDistinctFrom_Regex.IsMatch(query);
         public static bool ContainsSelectFromAggregate(string query) => SelectFromAggregate_Regex.IsMatch(query);
         public static bool ContainsInnerJoin(string query) => InnerJoin_Regex.IsMatch(query);
         public static bool ContainsOrderBy(string query) => OrderBy_Regex.IsMatch(query);
         public static bool ContainsGroupBy(string query) => GroupBy_Regex.IsMatch(query);
-
-        public static bool ContainsWhereBy(string query) => Where_Regex.IsMatch(query);
+        public static bool ContainsWhere(string query) => Where_Regex.IsMatch(query);
 
         public static SelectResult[] GetResults(IEnumerable<string> queries)
         {

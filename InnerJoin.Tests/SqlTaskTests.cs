@@ -1,7 +1,7 @@
 using NUnit.Framework;
-using InnerJoin.Tests.Helpers;
+using AutocodeDB.Helpers;
 using System;
-using InnerJoin.Tests.Models;
+using AutocodeDB.Models;
 using System.IO;
 
 namespace InnerJoin.Tests
