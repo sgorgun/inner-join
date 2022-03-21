@@ -109,7 +109,13 @@ namespace InnerJoin.Tests
             var actual = Queries[index - 1];
             Assert.IsTrue(SelectHelper.ContainsOrderBy(actual), "Query should contains 'ORDER BY' statement.");
         }
-
+ 
+        [Test]
+        public void SelectQuery_ContainsInnerJoin([Range(1, FilesCount)] int index)
+        {
+            var actual = Queries[index - 1];
+            Assert.IsTrue(SelectHelper.ContainsInnerJoin(actual), "Query should contain 'SELECT' and 'FROM' statements.");
+        }
         private static void AssertData(int index)
         {
             AssertFileExist(index);
