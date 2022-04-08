@@ -114,7 +114,7 @@ namespace InnerJoin.Tests
         public void SelectQuery_ContainsInnerJoin([Range(1, FilesCount)] int index)
         {
             var actual = Queries[index - 1];
-            Assert.IsTrue(SelectHelper.ContainsInnerJoin(actual), "Query should contain 'SELECT' and 'FROM' statements.");
+            Assert.IsTrue(SelectHelper.ContainsInnerJoin(actual), "Query should contain 'INNER JOIN' statement.");
         }
         private static void AssertData(int index)
         {
